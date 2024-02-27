@@ -74,7 +74,7 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -89,17 +89,18 @@ p {
 body {
   font-family: Inter;
   font-size: 18px;
-  font-style: normal;
+
   font-weight: 400;
-  line-height: normal;
+  line-height: 22px;
+  color: var(--primapy-dark);
 }
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1230px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 16px;
+  padding: 0 15px;
 }
 
 ul {
@@ -107,36 +108,90 @@ ul {
 }
 
 /* Header  */
+.header {
+  background-image: url(../images/header-main.jpg);
+  block-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  /* maliynok na ekran, bez povtoriv,  */
+  /* pozucia foto */
+  background-position: center top;
+}
+
+.header__contant {
+  min-height: calc(100vh-161px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+header::before {
+  content: ' ';
+  position: absolute;
+  background-image: url(../images/header-decor.svg);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 456px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(35%);
+  z-index: 2;
+}
+header::after {
+  content: ' ';
+  position: absolute;
+  background-image: url(../images/header-decor.svg);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 456px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(75%) rotate(180deg);
+  /* rozvertaiemo kartunky */
+  z-index: 3;
+}
 .header__top {
   display: flex;
-  justify-content: right;
+  /* rozmiwchennia riadka */
+  justify-content: flex-end;
   column-gap: 101px;
-  padding-top: 57px;
+  padding: 57px 0;
+  /* po centru riadka */
+  align-items: center;
 }
 .header__btn {
+  /* Oboviazkovo kolu veluki bukvu */
+  text-transform: uppercase;
   font-family: Comfortaa;
   font-size: 20px;
   font-weight: 700;
-  width: 193px;
-  height: 43px;
+
   background-color: var(--primapy-dark);
   color: var(--primapy-light);
-  padding: 0;
+  padding: 12px 71px;
   border: 0;
 }
 .header__btn:hover {
   font-family: Comfortaa;
   font-size: 20px;
   font-weight: 700;
-  width: 193px;
-  height: 43px;
+  padding: 12px 71px;
+  border: 0;
   background-color: var(--primapy-yellow);
   color: var(--primapy-dark);
+  cursor: pointer;
 }
-.logo__fill {
-  fill: var(--primapy-dark);
+
+.logo path {
+  transition: fill 0.3s;
 }
-.logo__fill:hover {
+.logo:hover path {
   fill: var(--primary-green);
 }
 .header__phone {
@@ -147,7 +202,62 @@ ul {
 }
 .header__phone:hover {
   font-family: Comfortaa;
-  font-size: 24px;
 
   font-weight: 700;
+}
+
+.header__contant {
+  min-height: calc(100vh-161px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.header__title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: Comfortaa;
+  font-size: 64px;
+
+  font-style: normal;
+  font-weight: 700;
+  line-height: 71px;
+  margin-top: 205px;
+}
+
+.header__contant-box {
+  min-width: 550px;
+  text-align: center;
+  margin-right: 30px;
+  color: var(--primapy-light);
+}
+
+.header__text {
+  font-style: 24px;
+  line-height: 27px;
+  margin-bottom: 20px;
+}
+
+.header__decor-text {
+  position: absolute;
+  bottom: 10px;
+  color: var(--primary-green);
+}
+.header__decor-text--one {
+  z-index: 1;
+  font-style: 130px;
+  line-height: 145;
+  font-family: 'Comfortaa';
+  opacity: 0.3;
+}
+
+.header__decor-text--tree {
+  min-width: 360px;
+  right: 145px;
+  z-index: 4;
+  font-weight: 300;
+  font-style: 32px;
+  line-height: 39;
+  text-align: center;
 }
