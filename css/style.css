@@ -1,0 +1,153 @@
+/* comfortaa-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/comfortaa-v45-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* comfortaa-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/comfortaa-v45-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* comfortaa-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/comfortaa-v45-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --primapy-light: #ffffff;
+  --primapy-yellow: #b9c400;
+  --primapy-dark: #262c27;
+  --primary-green: #0093a1;
+}
+
+/* base */
+
+* {
+  /*завжди пишеться в код  */
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+  /* щоб правилтно наслідувались властивості від батьків */
+}
+
+a {
+  color: inherit;
+  /* щоб наслідувався колір зсилок від батьків*/
+  text-decoration: none;
+  /* підкреслення */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+body {
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header  */
+.header__top {
+  display: flex;
+  justify-content: right;
+  column-gap: 101px;
+  padding-top: 57px;
+}
+.header__btn {
+  font-family: Comfortaa;
+  font-size: 20px;
+  font-weight: 700;
+  width: 193px;
+  height: 43px;
+  background-color: var(--primapy-dark);
+  color: var(--primapy-light);
+  padding: 0;
+  border: 0;
+}
+.header__btn:hover {
+  font-family: Comfortaa;
+  font-size: 20px;
+  font-weight: 700;
+  width: 193px;
+  height: 43px;
+  background-color: var(--primapy-yellow);
+  color: var(--primapy-dark);
+}
+.logo__fill {
+  fill: var(--primapy-dark);
+}
+.logo__fill:hover {
+  fill: var(--primary-green);
+}
+.header__phone {
+  font-family: Comfortaa;
+  font-size: 20px;
+
+  font-weight: 700;
+}
+.header__phone:hover {
+  font-family: Comfortaa;
+  font-size: 24px;
+
+  font-weight: 700;
+}
